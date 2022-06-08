@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.Optional;
 
-@Transactional
 @Service
 @RequiredArgsConstructor
 @Slf4j

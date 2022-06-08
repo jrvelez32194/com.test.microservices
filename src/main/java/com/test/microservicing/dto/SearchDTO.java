@@ -2,6 +2,7 @@ package com.test.microservicing.dto;
 
 import com.test.microservicing.dao.Savings;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
 

@@ -1,11 +1,17 @@
 package com.test.microservicing.dao;
 
 import com.test.microservicing.enumeration.AccountType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Checking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,18 +28,18 @@ public class Checking {
     @JoinColumn(name = "customerNumber", updatable = false, nullable = false)
     private Account accountChecking;
 
-    public Account getAccountChecking() {
+   /* public Account getAccountChecking() {
         return accountChecking;
     }
 
     public void setAccountChecking(Account accountChecking) {
         this.accountChecking = accountChecking;
-    }
+    }*/
 
-    public Checking() {
-    }
+//    public Checking() {
+//    }
 
-    public Long getId() {
+  /*  public Long getId() {
         return id;
     }
 
@@ -63,5 +69,5 @@ public class Checking {
 
     public void setAvailableBalance(BigDecimal availableBalance) {
         this.availableBalance = availableBalance;
-    }
+    }*/
 }
