@@ -2,11 +2,17 @@ package com.test.microservicing.dao;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.test.microservicing.enumeration.AccountType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Savings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,46 +30,4 @@ public class Savings {
     @JsonIgnore
     private Account accountSavings;
 
-    public Account getAccountSavings() {
-        return accountSavings;
-    }
-
-    public void setAccountSavings(Account accountSavings) {
-        this.accountSavings = accountSavings;
-    }
-
-    public Savings() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(Long accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public AccountType getAccountType() {
-        return accountType;
-    }
-
-    public void setAccountType(AccountType accountType) {
-        this.accountType = accountType;
-    }
-
-    public BigDecimal getAvailableBalance() {
-        return availableBalance;
-    }
-
-    public void setAvailableBalance(BigDecimal availableBalance) {
-        this.availableBalance = availableBalance;
-    }
 }
